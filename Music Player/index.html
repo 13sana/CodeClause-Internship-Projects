@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="C:\Users\HP\web\MusicPlayer\java.js" defer></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+</head>
+
+<body>
+    <div class="player">
+        <img src="assets/covers/cover1.png" class="cover" alt="cover" />
+        <h1 class="track-title">On My Way</h1>
+        <span class="artist-name">Alan Walker</span>
+        <div class="timeline-slider">
+            <div class="timeline">
+                <small class="time">0.00</small>
+                <small class="fulltime">2.55</small>
+            </div>
+            <div class="range-slider">
+                <input type="range" min="0" max="100" value="0" placeholder="range" class="slider">
+                </input>
+                <div class="slider-thumb"></div>
+                <div class="progress"></div>
+            </div>
+        </div>
+        <div class="volume-slider">
+            <div class="volume-icon">
+               <span class="material-symbols-outlined">volume_down</span>
+            </div>   
+            <div class="range-slider">
+                <input type="range" min="0" max="100" value="50" placeholder="range" class="slider"></input>
+                <div class="progress"></div>
+            </div>
+        </div>
+        <div class="controls">
+             <button class="btn" id="btnPrev"><span class="material-symbols-outlined">fast_rewind</span></button>
+             <button class="btn btn-main" id="mainPlayBtn" ><span class="material-symbols-outlined">play_arrow</span></button>
+              <button class="btn" id="btnNext"><span class="material-symbols-outlined">fast_forward</span></button>    
+        </div>
+    </div>
+    <audio id="audio" hidden>
+        <source src="assets/tracks/tracks1.mp3" />
+    </audio>
+</body>
+
+</html>
